@@ -3,4 +3,5 @@ export interface TeamMember {
   picture: any;
   title: string;
   desc: string;
+  github: string;
 }

@@ -19,12 +19,14 @@ export class CardsWrapperComponent {
         title: 'Senior Frontend Developer',
         desc: 'Lorem Ipsum',
         picture: null,
+        github: 'https://github.com/im-hamza-dev',
       },
       {
         name: 'Jack',
         title: 'Senior Backend Developer',
         desc: 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum',
         picture: null,
+        github: 'https://github.com/im-hamza-dev',
       },
     ];
   }

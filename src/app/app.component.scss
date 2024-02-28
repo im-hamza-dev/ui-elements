@@ -4,6 +4,7 @@
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   h1 {
     color: rgb(175, 175, 175);
+    font-size: clamp(2rem, 0.3043rem + 3.4783vw, 4rem);
   }
 }
 

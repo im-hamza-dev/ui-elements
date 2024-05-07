@@ -1,18 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit,  } from '@angular/core';
 import { TeamMember } from '../../models/TeamMember';
 import { CustomCardComponent } from '../custom-card/custom-card.component';
 import { NgFor } from '@angular/common';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Products } from '../../models/Products';
+import { ProductCardComponent } from '../../product-card/product-card.component';
 
 @Component({
   selector: 'app-cards-wrapper',
   standalone: true,
-  imports: [CustomCardComponent, NgFor],
+  imports: [CustomCardComponent, ProductCardComponent, NgFor, HttpClientModule],
   templateUrl: './cards-wrapper.component.html',
   styleUrl: './cards-wrapper.component.scss',
 })
-export class CardsWrapperComponent {
+export class CardsWrapperComponent implements OnInit {
   teamMembers: TeamMember[] | [];
-  constructor() {
+  public productsList:Products[]|[];
+  constructor(private http:HttpClient) {
     this.teamMembers = [
       {
         name: 'Hamza',
@@ -43,5 +47,14 @@ export class CardsWrapperComponent {
         github: 'https://github.com/im-hamza-dev',
       },
     ];
+  }
+  ngOnInit(): void {
+      this.fetchMockData()
+  }
+  public fetchMockData(){
+    this.http.get('https://fakestoreapi.com/products').subscribe((res:any)=>{
+      console.log(res)
+      this.productsList=res
+    })
   }
 }

@@ -1,0 +1,20 @@
+.rowWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2sec;
+  gap: 15px;
+  .rowItem {
+    padding: 10px 30px;
+    border-radius: 12px;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.55);
+    transition: 0.2sec;
+    background-color: rgba(33, 37, 41);
+    &:hover {
+      color: white;
+      cursor: pointer;
+    }
+  }
+}

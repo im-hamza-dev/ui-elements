@@ -1,6 +1,13 @@
-<h2 class="productHeading ">Products</h2>
-<div class="d-flex flex-row align-items-center flex-wrap mb-4" *ngFor="let productList of productsList" >
-    <app-product-card [productList]="productList"></app-product-card>
+<h2 class="productHeading">Products</h2>
+<div class="d-flex flex-row align-items-center flex-wrap mb-4">
+  <app-product-card
+    *ngFor="let productList of productsList"
+    [productList]="productList"
+  ></app-product-card>
 </div>
 
-<a class="btn btn-dark btn-custom px-4 border-0" href="https://github.com/im-hamza-dev/ui-elements">Code;</a>
+<a
+  class="btn btn-dark btn-custom px-4 border-0"
+  href="https://github.com/im-hamza-dev/ui-elements"
+  >Code;</a
+>

@@ -1,10 +1,10 @@
-import { Component, OnInit,  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TeamMember } from '../../models/TeamMember';
 import { CustomCardComponent } from '../custom-card/custom-card.component';
 import { NgFor } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Products } from '../../models/Products';
-import { ProductCardComponent } from '../../product-card/product-card.component';
+import { ProductCardComponent } from '../product-card/product-card.component';
 
 @Component({
   selector: 'app-cards-wrapper',
@@ -15,8 +15,9 @@ import { ProductCardComponent } from '../../product-card/product-card.component'
 })
 export class CardsWrapperComponent implements OnInit {
   teamMembers: TeamMember[] | [];
-  public productsList:Products[]|[];
-  constructor(private http:HttpClient) {
+  public productsList: Products[] | [];
+
+  constructor(private http: HttpClient) {
     this.teamMembers = [
       {
         name: 'Hamza',
@@ -49,12 +50,12 @@ export class CardsWrapperComponent implements OnInit {
     ];
   }
   ngOnInit(): void {
-      this.fetchMockData()
+    this.fetchMockData();
   }
-  public fetchMockData(){
-    this.http.get('https://fakestoreapi.com/products').subscribe((res:any)=>{
-      console.log(res)
-      this.productsList=res
-    })
+  public fetchMockData() {
+    this.http.get('https://fakestoreapi.com/products').subscribe((res: any) => {
+      console.log(res);
+      this.productsList = res;
+    });
   }
 }

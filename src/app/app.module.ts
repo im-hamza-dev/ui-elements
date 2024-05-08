@@ -8,18 +8,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { CategoriesModule } from './features/categories/categories.module';
 import { BrowserModule } from '@angular/platform-browser';
 
-
-
 @NgModule({
   declarations: [AppComponent], // components under this module
   imports: [
-    CommonModule, 
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     CoreModule,
     CardsWrapperComponent,
     CategoriesModule,
-  ],// coreModule, routingModule,. etc injected in app
-  bootstrap:[AppComponent]
+  ], // coreModule, routingModule,. etc injected in app
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,0 +1,25 @@
+.subMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+a {
+  padding: 10px 30px;
+  border-radius: 12px;
+  background-color: black;
+  color: rgba(255, 255, 255, 0.55);
+  transition: 0.2sec;
+  background-color: rgba(33, 37, 41);
+  outline: none;
+  text-decoration: none;
+  margin-right: 10px;
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
+}
+
+h2 {
+  margin-bottom: 50px;
+}
